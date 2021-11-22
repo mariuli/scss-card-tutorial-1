@@ -1,1 +1,30 @@
+html {
+     box-sizing: border-box; 
+    } 
+    *,
+    *:before, 
+    *:after { box-sizing: inherit; 
+}
+body{
+    padding: 0;
+    margin:0;
+}
+.dflex{
+    display:flex;
+    flex-direction: row;
+}
+@for $i from 1 to 6 {
+    .fs-#{$i}{
+        font-size: 1.5rem /$i + 1rem;
+        line-height: 1.5rem /$i + 1.2rem;
+    }
+}
 
+$baseSize: 5px;
+
+@for $i from 1 to 5 {
+    .m-#{$i}{
+        margin: $baseSize *$i;
+        
+    }
+}
